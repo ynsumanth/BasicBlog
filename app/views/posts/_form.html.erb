@@ -1,0 +1,27 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation" class="has-error">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="control-group">
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %><br>
+    <%= f.text_field :title, :class =>'controls' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :content, :class =>'control-label' %><br>
+    <%= f.text_field :content, :class =>'controls' %>
+  </div>
+  <br>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+</div>
+<% end %>
