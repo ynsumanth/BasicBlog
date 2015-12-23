@@ -9,6 +9,8 @@ class Blog.Views.PostsEditView extends Backbone.View
 
   initialize: ->
     @render()
+    #@model.on("invalid",@handleError)
+    #@model.on("valid", @removeError)
 
   render: ->
     @$el.html @template(@model.toJSON())
@@ -23,3 +25,5 @@ class Blog.Views.PostsEditView extends Backbone.View
                 success: (post) =>
                     @model = post
                     window.location.hash = "/#{@model.id}")
+                    
+  

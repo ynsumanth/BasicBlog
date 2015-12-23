@@ -3,3 +3,20 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', posts_path %>
+<script>
+  
+    $("#error-text-div").css({"display":"none"});
+    var textfield = $("#text-field").val();
+    if(textfield.length < 1 || textfield.length > 10) {
+      $("#submit-button").attr("disabled","true");
+    }
+    $(".text-field").on("keyup", function(){
+      if(textfield.length > 10) {
+        $("#error-text-div").css({"display":"block"});
+      } else {
+        $("#error-text-div").css({"display":"none"});
+      }
+    })
+    
+  
+</script>

@@ -26,3 +26,4 @@ class Blog.Routers.PostsRouter extends Backbone.Router
   edit: (id) ->
     post = @posts.get(id)
     @view = new Blog.Views.PostsEditView({model: post})
+  

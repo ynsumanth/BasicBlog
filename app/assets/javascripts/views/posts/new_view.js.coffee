@@ -10,6 +10,7 @@ class Blog.Views.PostsNewView extends Backbone.View
 
  initialize: ->
    @render()
+   #@model.on("invalid",@handleError)
 
  render: ->
    @$el.html @template()
@@ -20,7 +21,10 @@ class Blog.Views.PostsNewView extends Backbone.View
    title = $('#title').val()
    content = $('#content').val()
    model = new Blog.Models.Post({title: title, content: content})
-   @collection.create model,
+   @collection.create( model,
         success: (post) =>
        @model = post
-       window.location.hash = "/#{@model.id}"
+       window.location.hash = "/#{@model.id}") 
+       
+  #handleError: (model, error) =>
+  #    $(".validation-error").html("✗ " + error.msg)

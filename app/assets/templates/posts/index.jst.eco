@@ -1,5 +1,5 @@
 <table>
-  <tbody>
+  <thead>
     <tr>
      <th>Title</th>
      <th>Content</th>
@@ -7,6 +7,8 @@
      <th></th>
      <th></th>
     </tr>
+  </thead>
+  <tbody>
   </tbody>
 </table>
 

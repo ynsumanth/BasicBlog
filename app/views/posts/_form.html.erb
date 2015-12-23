@@ -10,18 +10,26 @@
       </ul>
     </div>
   <% end %>
+  <label for="required-text">Enter Title and Content</label>
+<div id="error-text-div" class="has-error">
+  <label for="error-text">Title should not be more than 10 characters</label>
+</div>
 <div class="control-group">
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %><br>
-    <%= f.text_field :title, :class =>'controls' %>
+    <%= f.text_field :title, :class =>'controls', :id =>'text-field' %>
   </div>
   <div class="control-group">
     <%= f.label :content, :class =>'control-label' %><br>
-    <%= f.text_field :content, :class =>'controls' %>
+    <%= f.text_area :content, :class =>'controls', :id =>'content-field',:style =>'width: 400px; height: 160px' %>
   </div>
   <br>
   <div class="form-actions">
-    <%= f.submit %>
+    <div id="submit-button">
+    <%= f.submit :class =>'btn btn-primary' %>
+    </div>
   </div>
 </div>
 <% end %>
+
+

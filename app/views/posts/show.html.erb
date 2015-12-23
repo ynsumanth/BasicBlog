@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<form class="form-control">
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -10,5 +10,6 @@
   <%= @post.content %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post), :class =>'btn btn-default' %> |
+<%= link_to 'Back', posts_path, :class =>'btn btn-default' %>
+</form>
