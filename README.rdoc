@@ -5,7 +5,7 @@ rails s -b $IP -p $PORT
 
 Once the server is started, the below url is the one you need to click to add blog posts. They will be persisted in the database using Rails.
 
-http://rails-tutorial-sumanth-yn.c9users.io:8080/posts
+  http://rails-tutorial-sumanth-yn.c9users.io:8080/posts
 
 A search box is visible on the top right side of the web page, which provides an instant search feature for that page.
 * ...
